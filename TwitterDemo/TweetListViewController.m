@@ -18,6 +18,19 @@
 
 @implementation TweetListViewController
 
+- (void)refresh:(id)sender  {
+    [[TwitterClient sharedInstance] getTweets:^(NSArray *array, NSError *error) {
+        if (array) {
+            self.tweets = array;
+            NSLog(@"tweet count: %ld", self.tweets.count);
+            [self.tableView reloadData];
+            [sender endRefreshing];
+        } else {
+            NSLog(@"Error when getting tweets");
+        }
+    }];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -30,17 +43,11 @@
     UINib *nib = [UINib nibWithNibName:@"TweetTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"TweetTableViewCell"];
     
-    [[TwitterClient sharedInstance] getTweets:^(NSArray *array, NSError *error) {
-        if (array) {
-            self.tweets = array;
-            NSLog(@"tweet count: %ld", self.tweets.count);
-            [self.tableView reloadData];
-        } else {
-            NSLog(@"Error when getting tweets");
-        }
-    }];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:refreshControl atIndex:0];
     
-    
+    [self refresh:nil];
 }
 
 - (void)didReceiveMemoryWarning {
