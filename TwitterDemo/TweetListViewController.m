@@ -62,9 +62,8 @@
 //    [cell setNeedsUpdateConstraints];
 
     
-    Tweet* tweet = self.tweets[indexPath.row];
-    [cell populateFromDictionary:tweet];
-    
+    [cell populateFromTweet:self.tweets[indexPath.row]];
+
 //    cell
     return cell;
 }

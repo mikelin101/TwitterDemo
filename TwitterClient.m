@@ -56,13 +56,13 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
 
 - (void) getTweets:(void (^)(NSArray *array, NSError *error))completion {
     [[TwitterClient sharedInstance] GET:@"1.1/statuses/home_timeline.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-         NSLog(@"tweets: %@", responseObject);
+//         NSLog(@"tweets: %@", responseObject);
         NSArray *tweets = [Tweet tweetsWithArray:responseObject];
         completion(tweets, nil);
 
-        for (Tweet* tweet in tweets) {
-            NSLog(@"tweet: %@, created: %@", tweet.text, tweet.createdAt);
-        }
+//        for (Tweet* tweet in tweets) {
+//            NSLog(@"tweet: %@, created: %@", tweet.text, tweet.createdAt);
+//        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed getting tweets");
         completion(nil, error);

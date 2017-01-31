@@ -15,7 +15,7 @@
     if(self) {
         self.name = dictionary[@"name"];
         self.screenname = dictionary[@"screen_name"];
-        self.profileImageUrl = dictionary[@"profile_image_url"];
+        self.profileImageUrl = dictionary[@"profile_image_url_https"];
         self.tagline = dictionary[@"description"];
     }
     return self;

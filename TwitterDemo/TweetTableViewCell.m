@@ -35,15 +35,16 @@
     // Configure the view for the selected state
 }
 
-- (void)populateFromDictionary:(Tweet *)tweet {
+- (void)populateFromTweet:(Tweet *)tweet {
     self.nameLabel.text = tweet.user.name;
     self.handleLabel.text = tweet.user.screenname;
     self.contentLabel.text = tweet.text;
     
-    NSLog(@"%@", tweet.user.profileImageUrl);
+//    NSLog(@"%@", tweet.user.profileImageUrl);
     
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", tweet.createdAt];
     [self.profileImageView setImageWithURL:[NSURL URLWithString: tweet.user.profileImageUrl]];
+//    [self.profileImageView setImage:[UIImage imageNamed:@"image.png"]];
 }
 
 @end

@@ -6,6 +6,6 @@ target 'TwitterDemo' do
   # use_frameworks!
 
   # Pods for TwitterDemo
-  pod 'AFNetworking'
   pod 'BDBOAuth1Manager', '1.4.0'
+  pod 'AFNetworking'
 end

@@ -18,6 +18,7 @@
 		2506536F1E3FB9E300A90C38 /* TweetListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2506536D1E3FB9E300A90C38 /* TweetListViewController.xib */; };
 		25871E321E3FC82D009771DB /* TweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25871E301E3FC82D009771DB /* TweetTableViewCell.m */; };
 		25871E331E3FC82D009771DB /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25871E311E3FC82D009771DB /* TweetTableViewCell.xib */; };
+		258E15821E41256B00D1D81F /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 258E15811E41256B00D1D81F /* image.png */; };
 		25B69E581E400361007C365A /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B69E571E400361007C365A /* Tweet.m */; };
 		25B69E5B1E400378007C365A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B69E5A1E400378007C365A /* User.m */; };
 		4158C31DE2ECAF06028EA128 /* libPods-TwitterDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 313FBE12F16FF67298260CFE /* libPods-TwitterDemo.a */; };
@@ -43,6 +44,7 @@
 		25871E2F1E3FC82D009771DB /* TweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewCell.h; sourceTree = "<group>"; };
 		25871E301E3FC82D009771DB /* TweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewCell.m; sourceTree = "<group>"; };
 		25871E311E3FC82D009771DB /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		258E15811E41256B00D1D81F /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		25B69E561E400361007C365A /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		25B69E571E400361007C365A /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		25B69E591E400378007C365A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		250653531E3FB92800A90C38 /* TwitterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				258E15811E41256B00D1D81F /* image.png */,
 				25B69E551E400342007C365A /* Models */,
 				250653571E3FB92800A90C38 /* AppDelegate.h */,
 				250653581E3FB92800A90C38 /* AppDelegate.m */,
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2501287F1E3FF41F00596B33 /* LoginViewController.xib in Resources */,
+				258E15821E41256B00D1D81F /* image.png in Resources */,
 				250653641E3FB92800A90C38 /* LaunchScreen.storyboard in Resources */,
 				250653611E3FB92800A90C38 /* Assets.xcassets in Resources */,
 				2506536F1E3FB9E300A90C38 /* TweetListViewController.xib in Resources */,
