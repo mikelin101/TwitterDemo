@@ -8,8 +8,11 @@
 
 #import "TweetListViewController.h"
 #import "TweetTableViewCell.h"
+#import "TwitterClient.h"
 
 @interface TweetListViewController () <UITableViewDataSource>
+
+@property (nonatomic, strong) NSArray* tweets;
 
 @end
 
@@ -26,6 +29,18 @@
     
     UINib *nib = [UINib nibWithNibName:@"TweetTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"TweetTableViewCell"];
+    
+    [[TwitterClient sharedInstance] getTweets:^(NSArray *array, NSError *error) {
+        if (array) {
+            self.tweets = array;
+            NSLog(@"tweet count: %ld", self.tweets.count);
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"Error when getting tweets");
+        }
+    }];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,18 +49,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.tweets.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetTableViewCell" forIndexPath:indexPath];
-    if (indexPath.row % 2)  {
-        cell.retweetContainerHeightConstraint.constant = 0;
-    } else {
-        cell.retweetContainerHeightConstraint.constant = 24 * indexPath.row;
-    }
-    [cell setNeedsUpdateConstraints];
+//    if (indexPath.row % 2)  {
+//        cell.retweetContainerHeightConstraint.constant = 0;
+//    } else {
+//        cell.retweetContainerHeightConstraint.constant = 24 * indexPath.row;
+//    }
+//    [cell setNeedsUpdateConstraints];
+
     
+    Tweet* tweet = self.tweets[indexPath.row];
+    [cell populateFromDictionary:tweet];
+    
+//    cell
     return cell;
 }
 

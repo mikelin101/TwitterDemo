@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "TweetListViewController.h"
+#import "LoginViewController.h"
+#import "TwitterClient.h"
+#import "Tweet.h"
+#import "User.h"
 
 @interface AppDelegate ()
 
@@ -18,13 +22,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    TweetListViewController *viewController = [[TweetListViewController alloc] initWithNibName:@"TweetListViewController" bundle:nil];
+//    TweetListViewController *viewController = [[TweetListViewController alloc] initWithNibName:@"TweetListViewController" bundle:nil];
     
     CGRect frame = [UIScreen mainScreen].bounds;
     self.window = [[UIWindow alloc] initWithFrame:frame];
-    self.window.rootViewController = viewController;
-    [self.window makeKeyAndVisible];
     
+    self.window.rootViewController = /*viewController*/ [[LoginViewController alloc] init];
+
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
@@ -48,6 +54,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    [[TwitterClient sharedInstance] openURL: url];
+    
+    return YES;
 }
 
 @end
