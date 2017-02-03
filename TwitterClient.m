@@ -54,6 +54,16 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
    
 }
 
+- (void) postTweet:(NSString *) tweet withCompletion: (void (^)(NSError *error))completion {
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    dictionary[@"status"] = tweet;
+    [[TwitterClient sharedInstance] POST:@"1.1/statuses/update.json" parameters:dictionary success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        completion(nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(error);
+    }];
+}
+
 - (void) getTweets:(void (^)(NSArray *array, NSError *error))completion {
     [[TwitterClient sharedInstance] GET:@"1.1/statuses/home_timeline.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //         NSLog(@"tweets: %@", responseObject);

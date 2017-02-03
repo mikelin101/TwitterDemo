@@ -16,5 +16,6 @@
 
 - (void) loginWithCompletion: (void (^)(User *user, NSError *error)) completion;
 - (void) openURL: (NSURL *) url;
+- (void) postTweet:(NSString *) tweet withCompletion: (void (^)(NSError *error))completion;
 - (void) getTweets: (void (^)(NSArray *array, NSError *error)) completion;
 @end

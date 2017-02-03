@@ -9,6 +9,7 @@
 #import "TweetListViewController.h"
 #import "TweetTableViewCell.h"
 #import "TwitterClient.h"
+#import "ComposeViewController.h"
 
 @interface TweetListViewController () <UITableViewDataSource>
 
@@ -17,6 +18,11 @@
 @end
 
 @implementation TweetListViewController
+
+- (IBAction)onNewClicked:(UIBarButtonItem *)sender {
+    ComposeViewController *viewController = [[ComposeViewController alloc] init];
+    [self presentViewController:viewController animated:false completion:nil];
+}
 
 - (void)refresh:(id)sender  {
     [[TwitterClient sharedInstance] getTweets:^(NSArray *array, NSError *error) {
