@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Tweet.h"
 @interface TweetViewController : UIViewController
+
+- (instancetype)initWithTweet:(Tweet *) tweet;
 
 @end

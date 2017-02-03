@@ -95,7 +95,9 @@
 */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self presentViewController:[[TweetViewController alloc] init] animated:NO completion:nil];
+    Tweet *tweet = self.tweets[indexPath.row];
+    
+    [self presentViewController:[[TweetViewController alloc] initWithTweet:tweet] animated:NO completion:nil];
 }
 
 @end
