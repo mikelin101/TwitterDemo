@@ -16,19 +16,30 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viu-fk-y1n">
+                    <rect key="frame" x="0.0" y="24" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="Home" id="ha9-aJ-u2H">
+                            <barButtonItem key="rightBarButtonItem" title="New" id="ZWg-Qn-Z01"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uNg-VB-a5B">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="68" width="600" height="532"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="uNg-VB-a5B" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="78g-pl-n1S"/>
-                <constraint firstItem="uNg-VB-a5B" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="CuB-vh-jvj"/>
+                <constraint firstItem="uNg-VB-a5B" firstAttribute="top" secondItem="viu-fk-y1n" secondAttribute="bottom" id="HPp-RL-u0A"/>
                 <constraint firstItem="uNg-VB-a5B" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Q9X-hV-IPN"/>
-                <constraint firstItem="uNg-VB-a5B" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cF7-CE-zM8"/>
+                <constraint firstItem="viu-fk-y1n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bl3-Jq-mbp"/>
+                <constraint firstItem="viu-fk-y1n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="24" id="eoE-hB-tp5"/>
+                <constraint firstAttribute="bottom" secondItem="uNg-VB-a5B" secondAttribute="bottom" id="fno-wv-AUN"/>
+                <constraint firstItem="uNg-VB-a5B" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jDJ-xk-iRQ"/>
+                <constraint firstItem="viu-fk-y1n" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="lpH-eu-feE"/>
             </constraints>
-            <point key="canvasLocation" x="314" y="346"/>
+            <point key="canvasLocation" x="314" y="373"/>
         </view>
     </objects>
 </document>
