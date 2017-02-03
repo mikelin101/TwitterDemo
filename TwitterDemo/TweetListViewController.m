@@ -10,8 +10,9 @@
 #import "TweetTableViewCell.h"
 #import "TwitterClient.h"
 #import "ComposeViewController.h"
+#import "TweetViewController.h"
 
-@interface TweetListViewController () <UITableViewDataSource>
+@interface TweetListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray* tweets;
 
@@ -42,6 +43,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     self.tableView.estimatedRowHeight = 200;
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -67,6 +69,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetTableViewCell" forIndexPath:indexPath];
+
 //    if (indexPath.row % 2)  {
 //        cell.retweetContainerHeightConstraint.constant = 0;
 //    } else {
@@ -90,5 +93,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self presentViewController:[[TweetViewController alloc] init] animated:NO completion:nil];
+}
 
 @end

@@ -18,6 +18,8 @@
 		2506536F1E3FB9E300A90C38 /* TweetListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2506536D1E3FB9E300A90C38 /* TweetListViewController.xib */; };
 		2525910E1E44096500675C80 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2525910C1E44096500675C80 /* ComposeViewController.m */; };
 		2525910F1E44096500675C80 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2525910D1E44096500675C80 /* ComposeViewController.xib */; };
+		252591131E441AA800675C80 /* TweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 252591111E441AA800675C80 /* TweetViewController.m */; };
+		252591141E441AA800675C80 /* TweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 252591121E441AA800675C80 /* TweetViewController.xib */; };
 		25871E321E3FC82D009771DB /* TweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25871E301E3FC82D009771DB /* TweetTableViewCell.m */; };
 		25871E331E3FC82D009771DB /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25871E311E3FC82D009771DB /* TweetTableViewCell.xib */; };
 		258E15821E41256B00D1D81F /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 258E15811E41256B00D1D81F /* image.png */; };
@@ -46,6 +48,9 @@
 		2525910B1E44096500675C80 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		2525910C1E44096500675C80 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		2525910D1E44096500675C80 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		252591101E441AA800675C80 /* TweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetViewController.h; sourceTree = "<group>"; };
+		252591111E441AA800675C80 /* TweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewController.m; sourceTree = "<group>"; };
+		252591121E441AA800675C80 /* TweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetViewController.xib; sourceTree = "<group>"; };
 		25871E2F1E3FC82D009771DB /* TweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewCell.h; sourceTree = "<group>"; };
 		25871E301E3FC82D009771DB /* TweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewCell.m; sourceTree = "<group>"; };
 		25871E311E3FC82D009771DB /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
@@ -113,6 +118,9 @@
 				2525910B1E44096500675C80 /* ComposeViewController.h */,
 				2525910C1E44096500675C80 /* ComposeViewController.m */,
 				2525910D1E44096500675C80 /* ComposeViewController.xib */,
+				252591101E441AA800675C80 /* TweetViewController.h */,
+				252591111E441AA800675C80 /* TweetViewController.m */,
+				252591121E441AA800675C80 /* TweetViewController.xib */,
 			);
 			path = TwitterDemo;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				252591141E441AA800675C80 /* TweetViewController.xib in Resources */,
 				2501287F1E3FF41F00596B33 /* LoginViewController.xib in Resources */,
 				258E15821E41256B00D1D81F /* image.png in Resources */,
 				250653641E3FB92800A90C38 /* LaunchScreen.storyboard in Resources */,
@@ -282,6 +291,7 @@
 				2506536E1E3FB9E300A90C38 /* TweetListViewController.m in Sources */,
 				250653591E3FB92800A90C38 /* AppDelegate.m in Sources */,
 				2525910E1E44096500675C80 /* ComposeViewController.m in Sources */,
+				252591131E441AA800675C80 /* TweetViewController.m in Sources */,
 				250653561E3FB92800A90C38 /* main.m in Sources */,
 				25B69E581E400361007C365A /* Tweet.m in Sources */,
 				25871E321E3FC82D009771DB /* TweetTableViewCell.m in Sources */,
